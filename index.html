@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Classification</title>
+    <script>
+       
+function determineTriangle(a, b, c) {
+            
+if (a === b && b === c) {
+    window.alert("The triangle is EQUILATERAL");
+    } else if (a === b || a === c || b === c) {
+    window.alert("The triangle is ISOSCELES");
+    } else {
+    window.alert("The triangle is SCALENE");
+    }
+    }
+    
+function main() {
+            
+var a = prompt("Enter the length of side A: ");
+     while (isNaN(a)) {
+    a = prompt("Please enter a valid number for side A: ");
+            }
+
+    var b = prompt("Enter the length of side B: ");
+    while (isNaN(b)) {
+    b = prompt("Please enter a valid number for side B: ");
+            }
+
+    var c = prompt("Enter the length of side C: ");
+    while (isNaN(c)) {
+                c = prompt("Please enter a valid number for side C: ");
+            }
+
+    determineTriangle(parseFloat(a), parseFloat(b), parseFloat(c));
+        }
+    </script>
+</head>
+<body onload="main()">
+    <h1>Triangle Classification</h1>
+    <p>This page will prompt you to enter the lengths of the sides of a triangle and classify it as equilateral, isosceles, or scalene.</p>
+</body>
+</html>
